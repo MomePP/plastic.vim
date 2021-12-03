@@ -46,8 +46,7 @@ let s:aqua = { 'gui': '#56b6c2', 'cterm256': '38'}
 let s:white = { 'gui': '#d7d7d7', 'cterm256': '145'}
 let s:black = { 'gui': '#181a1f', 'cterm256': '234'}
 let s:visual_black = { 'gui': 'NONE', 'cterm256': 'NONE'}
-" let s:background = {'gui': '#21252b', 'cterm256': '235'}
-let s:background = {'gui': 'NONE', 'cterm256': 'NONE'}
+let s:background = {'gui': '#21252b', 'cterm256': '235'}
 let s:foreground = {'gui': '#a9b2c3', 'cterm256': '235'}
 let s:grey = { 'gui': '#abb2bf', 'cterm256': '59' }
 let s:punctuation = { 'gui': '#7c8696', 'cterm256': '238' }
@@ -59,22 +58,22 @@ let s:none = {'gui': 'NONE', 'cterm256': 'NONE'}
 " Syntax Definitions
 "--------------------
 " <sid>hi(GROUP, FOREGROUND, BACKGROUND, ATTRIBUTE, SPECIAL)
-call <sid>hi('Normal', s:white, s:background, 'none', {})
+call <sid>hi('Normal', s:white, s:visual_black, 'none', {})
 
 " UI {{{
-call <sid>hi('Cursor', s:none, s:none, 'inverse', {})
+call <sid>hi('Cursor', s:none, s:none, 'reverse', {})
 hi link lCursor Cursor
 hi link CursorIM Cursor
-call <sid>hi('CursorLine', s:white, s:none, 'bold', {})
+call <sid>hi('CursorLine', s:white, s:background, 'bold', {})
 call <sid>hi('EndOfBuffer', s:whisky, s:none, 'none', {})
 call <sid>hi('Conceal', s:blue, s:none, 'none', {})
 call <sid>hi('CursorColumn', s:none, s:blue, 'none', {})
 call <sid>hi('ColorColumn', s:none, s:punctuation, 'none', {})
-call <sid>hi('FoldColumn', s:punctuation, s:background, 'none', {})
-call <sid>hi('SignColumn', s:none, s:background, 'none', {})
-call <sid>hi('VertSplit', s:grey, s:background, 'none', {})
-call <sid>hi('LineNr', s:punctuation, s:background, 'none', {})
-call <sid>hi('CursorLineNr', s:punctuation, s:background, 'none', {})
+call <sid>hi('FoldColumn', s:punctuation, s:visual_black, 'none', {})
+call <sid>hi('SignColumn', s:none, s:visual_black, 'none', {})
+call <sid>hi('VertSplit', s:grey, s:visual_black, 'none', {})
+call <sid>hi('LineNr', s:punctuation, s:visual_black, 'none', {})
+call <sid>hi('CursorLineNr', s:punctuation, s:visual_black, 'none', {})
 
 call <sid>hi('DiffAdd', s:black, s:green, 'none', {})
 call <sid>hi('DiffChange', s:black, s:purple, 'none', {})
