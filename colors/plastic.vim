@@ -110,13 +110,12 @@ hi link StatusLineTerm StatusLine
 hi link StatusLineTermNC StatusLineNC
 
 call <sid>hi('TabLine', s:white, s:black, 'none', {})
-hi link TabLineFill TabLine
+call <sid>hi('TabLineFill', s:visual_black, s:none, 'none', {})
 call <sid>hi('TabLineSel', s:whisky, s:black, 'none', {})
 
 call <sid>hi('Title', s:white, s:none, 'none', {})
 call <sid>hi('Visual', s:black, s:white, 'none', {})
 hi link VisualNOS Visual
-call <sid>hi('TabLine', s:white, s:black, 'none', {})
 call <sid>hi('WildMenu', s:black, s:white, 'bold', {})
 "}}}
 
