@@ -5,6 +5,7 @@
 [VSCode Plastic](https://github.com/will-stone/plastic) theme port for vim/neovim.
 
 - This fork remove background color, so i can set the background from iTerm itself.
+- Added colorscheme for lualine
 
 ## Install
 
@@ -22,5 +23,12 @@ colorscheme plastic
 
 " Lightline
 let g:lightline = { 'colorscheme': 'plastic' }
+
+" lualine
+lualine.setup {
+  options = {
+    theme = require("lualine.plastic"),
+  },
+}
 ```
 
